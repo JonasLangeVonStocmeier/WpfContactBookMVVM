@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfContactBookMVVM.ViewModels;
 
 namespace WpfContactBookMVVM.Views
 {
@@ -22,6 +23,9 @@ namespace WpfContactBookMVVM.Views
         public AddUser()
         {
             InitializeComponent();
+
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
+            this.DataContext = addUserViewModel;
         }
     }
 }
