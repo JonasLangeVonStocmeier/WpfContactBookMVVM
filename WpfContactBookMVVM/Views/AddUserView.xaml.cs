@@ -17,9 +17,9 @@ namespace WpfContactBookMVVM.Views
     /// <summary>
     /// Interaktionslogik für Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AddUser : Window
     {
-        public Window1()
+        public AddUser()
         {
             InitializeComponent();
         }

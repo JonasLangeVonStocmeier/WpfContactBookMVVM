@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfContactBookMVVM.ViewModels;
 
 namespace WpfContactBookMVVM
 {
@@ -19,6 +20,9 @@ namespace WpfContactBookMVVM
         public MainWindow()
         {
             InitializeComponent();
+
+            MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
+            this.DataContext = mainWindowViewModel;
         }
 
         private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)

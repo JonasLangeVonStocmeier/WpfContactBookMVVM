@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1000">
     <Grid Background="#F5F5F5">
-        <Grid Background="White" Grid.Row="1" Margin="25, 40, 25, 15">
+        <Grid Background="White" Grid.Row="1" Margin="15, 25, 15, 25">
             <TextBox Name="FilterTextBox" BorderThickness="1" BorderBrush="#E0E0E0" TextChanged="FilterTextBox_TextChanged" Height="30" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Button Height="30" Content="+ Add User" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="25" BorderThickness="1" BorderBrush="#E0E0E0"/>
-            <ListView Name="UserList" BorderBrush="#cdcdcd" Margin="25, 70, 25, 25" Padding="0">
+            <Button Command="{Binding ShowWindowCommand}" Height="30" Content="+ Add User" Width="100" VerticalContentAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="25" BorderThickness="1" BorderBrush="#E0E0E0"/>
+            <ListView ItemsSource="{Binding Users}" Name="UserList" BorderBrush="#cdcdcd" Margin="25, 70, 25, 25" Padding="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="200" Header="Name" />
-                        <GridViewColumn Width="200" Header="Email" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="250" Header="Name" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Email}" Width="250" Header="Email" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Telephone}" Width="250" Header="Telephone" />
+
                     </GridView>
                 </ListView.View>
             </ListView>
